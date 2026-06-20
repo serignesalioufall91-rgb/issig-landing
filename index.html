@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISSIG Thiès - Institut Supérieur des Sciences en Informatique et Gestion</title>
+  <meta name="description" content="Rejoignez l'ISSIG de Thiès, l'institut supérieur d'excellence en Informatique, Gestion et Administration au Sénégal. Formations reconnues, stages garantis et insertion professionnelle.">
+  <meta name="keywords" content="ISSIG, ISSIG Thiès, école informatique Sénégal, école gestion Sénégal, université Thiès, formation informatique, gestion d'entreprise, comptabilité Sénégal">
+  <meta name="author" content="ISSIG">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for some standard icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header id="header" class="site-header">
+    <div class="container header-container">
+      <!-- Logo Container -->
+      <a href="#" class="logo-link" id="logo-anchor" aria-label="Accueil ISSIG">
+        <div class="logo-wrapper">
+          <svg class="issig-logo-svg" viewBox="0 0 400 210" xmlns="http://www.w3.org/2000/svg">
+            <!-- Graduation Cap (Mortier) -->
+            <g transform="translate(155, 5)">
+              <path d="M 0,15 L 45,5 L 90,15 L 45,25 Z" fill="#0F172A" stroke="#D4AF37" stroke-width="1.2"/>
+              <path d="M 25,19 L 25,28 C 25,33 65,33 65,28 L 65,19" fill="#1E293B"/>
+              <path d="M 45,15 L 18,22 L 18,34" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="18" cy="34" r="2.5" fill="#D4AF37"/>
+            </g>
+            
+            <!-- Scroll (Parchemin) -->
+            <g transform="translate(160, 38)">
+              <path d="M 10,12 C 5,12 5,22 10,22 L 75,22 C 80,22 80,12 75,12 Z" fill="#FEF08A" stroke="#D4AF37" stroke-width="1.5"/>
+              <path d="M 10,12 C 15,12 15,22 10,22" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+              <ellipse cx="10" cy="17" rx="3" ry="5" fill="#EAB308" stroke="#D4AF37" stroke-width="1"/>
+              <rect x="40" y="11.5" width="6" height="11" fill="#D4AF37"/>
+              <path d="M 43,22.5 L 40,29 L 46,29 Z" fill="#D4AF37"/>
+            </g>
+            
+            <!-- iSSIG Graphic & Text -->
+            <g>
+              <!-- i dot -->
+              <circle cx="105" cy="82" r="5.5" fill="#16A34A" />
+              <!-- i body -->
+              <rect x="100" y="93" width="10" height="47" rx="2.5" fill="#16A34A" />
+              <!-- Gold Arc crossing the "i" -->
+              <path d="M 82,96 C 92,106 115,114 145,114" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" />
+              <!-- School Name -->
+              <text x="120" y="97" font-family="'Montserrat', sans-serif" font-size="7.5" font-weight="800" fill="#0F172A" letter-spacing="0.1" textLength="200" lengthAdjust="spacingAndGlyphs">
+                INSTITUT SUPÉRIEUR DES SCIENCES INFORMATIQUE & GESTION
+              </text>
+              <!-- SSIG Large Letters -->
+              <text x="120" y="140" font-family="'Montserrat', sans-serif" font-size="44" font-weight="900" fill="#16A34A" letter-spacing="2">
+                SSIG
+              </text>
+            </g>
+            
+            <!-- Separator Line -->
+            <line x1="40" y1="152" x2="360" y2="152" stroke="#16A34A" stroke-width="2.5" />
+            
+            <!-- Mottos (Devises) -->
+            <g transform="translate(200, 155)">
+              <text x="0" y="15" font-family="'Montserrat', sans-serif" font-size="10.5" font-weight="800" fill="#0F172A" letter-spacing="0.8" text-anchor="middle">
+                Travail - Discipline - Rigueur
+              </text>
+              <text x="0" y="29" font-family="'Montserrat', sans-serif" font-size="10.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-style="italic">
+                La Gestion, notre Spécialité
+              </text>
+              <text x="0" y="43" font-family="'Montserrat', sans-serif" font-size="10" font-weight="600" fill="#64748B" text-anchor="middle">
+                L'expertise au bout de nos doigts
+              </text>
+            </g>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link active">Accueil</a></li>
+          <li><a href="#formations" class="nav-link">Formations</a></li>
+          <li><a href="#admission" class="nav-link">Admission</a></li>
+          <li><a href="#parcours" class="nav-link">Vie étudiante</a></li>
+          <li><a href="#actualites" class="nav-link">Actualités</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA Button & Menu Toggle -->
+      <div class="header-actions">
+        <button class="btn btn-primary btn-header open-admission-modal" id="header-cta">S'inscrire maintenant</button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <div class="mobile-menu-container">
+      <ul class="mobile-nav-list">
+        <li><a href="#" class="mobile-nav-link active">Accueil</a></li>
+        <li><a href="#formations" class="mobile-nav-link">Formations</a></li>
+        <li><a href="#admission" class="mobile-nav-link">Admission</a></li>
+        <li><a href="#parcours" class="mobile-nav-link">Vie étudiante</a></li>
+        <li><a href="#actualites" class="mobile-nav-link">Actualités</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <button class="btn btn-primary open-admission-modal" style="width: 100%; margin-top: 2rem;">S'inscrire maintenant</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content scroll-reveal">
+        <span class="hero-badge"><i class="fa-solid fa-graduation-cap"></i> Excellence Académique à Thiès</span>
+        <h1 class="hero-title">Formez-vous aujourd'hui pour les <span>métiers de demain</span></h1>
+        <p class="hero-subtitle">
+          L'Institut Supérieur des Sciences en Informatique et Gestion de Thiès accompagne les étudiants vers une carrière solide dans les domaines de l'informatique, de la gestion et de l'entreprise.
+        </p>
+        <div class="hero-actions">
+          <a href="#formations" class="btn btn-primary"><i class="fa-solid fa-graduation-cap"></i> Découvrir nos formations</a>
+          <button class="btn btn-outline open-admission-modal"><i class="fa-solid fa-file-signature"></i> Demander une admission</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Figures Section -->
+  <section class="figures-section" id="figures">
+    <div class="container">
+      <div class="figures-grid">
+        <div class="figure-card scroll-reveal">
+          <div class="figure-icon"><i class="fa-solid fa-award"></i></div>
+          <div class="figure-number" data-target="15">0</div>
+          <div class="figure-label">Ans d'expérience</div>
+          <p class="figure-desc">Plus de 15 années à former les leaders de demain à Thiès.</p>
+        </div>
+        <div class="figure-card scroll-reveal" style="animation-delay: 0.1s;">
+          <div class="figure-icon"><i class="fa-solid fa-file-contract"></i></div>
+          <div class="figure-number" data-target="100">0</div>
+          <div class="figure-label">Diplômes Reconnus</div>
+          <p class="figure-desc">Programmes homologués et conformes aux exigences académiques.</p>
+        </div>
+        <div class="figure-card scroll-reveal" style="animation-delay: 0.2s;">
+          <div class="figure-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="figure-number" data-target="30">0</div>
+          <div class="figure-label">Formations Pro</div>
+          <p class="figure-desc">Des cursus adaptés aux réalités du marché de l'emploi.</p>
+        </div>
+        <div class="figure-card scroll-reveal" style="animation-delay: 0.3s;">
+          <div class="figure-icon"><i class="fa-solid fa-users-gear"></i></div>
+          <div class="figure-number" data-target="100">0</div>
+          <div class="figure-label">Encadrement Qualifié</div>
+          <p class="figure-desc">Des enseignants experts et un suivi pédagogique personnalisé.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose ISSIG Section -->
+  <section class="why-section" id="why-choose-us">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <span class="section-tag">Avantages ISSIG</span>
+        <h2 class="section-title">Pourquoi choisir l'ISSIG ?</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          Un cadre d'apprentissage optimal alliant théorie et pratique pour assurer la réussite et l'insertion de nos étudiants.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <!-- Benefit 1 -->
+        <div class="why-card scroll-reveal">
+          <div class="why-card-icon"><i class="fa-solid fa-stamp"></i></div>
+          <h3 class="why-card-title">Diplômes reconnus</h3>
+          <p class="why-card-text">
+            Nos programmes d'études sont rigoureusement structurés et certifiés, garantissant une conformité totale avec les exigences nationales pour une insertion facile.
+          </p>
+          <span class="why-card-gold-corner"></span>
+        </div>
+        
+        <!-- Benefit 2 -->
+        <div class="why-card scroll-reveal" style="animation-delay: 0.1s;">
+          <div class="why-card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3 class="why-card-title">Formation pratique</h3>
+          <p class="why-card-text">
+            L'apprentissage repose sur des cas d'études réels, des projets technologiques et des ateliers réguliers pour développer des compétences opérationnelles immédiates.
+          </p>
+          <span class="why-card-gold-corner"></span>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="why-card scroll-reveal" style="animation-delay: 0.2s;">
+          <div class="why-card-icon"><i class="fa-solid fa-building-user"></i></div>
+          <h3 class="why-card-title">Insertion professionnelle</h3>
+          <p class="why-card-text">
+            Grâce à nos partenariats avec les entreprises locales et nationales, nous préparons nos étudiants aux exigences du marché de l'emploi avec des stages obligatoires.
+          </p>
+          <span class="why-card-gold-corner"></span>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="why-card scroll-reveal" style="animation-delay: 0.3s;">
+          <div class="why-card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <h3 class="why-card-title">Encadrement personnalisé</h3>
+          <p class="why-card-text">
+            Nous offrons un suivi pédagogique continu et de proximité. Chaque étudiant bénéficie d'une attention particulière pour surmonter ses difficultés et réussir.
+          </p>
+          <span class="why-card-gold-corner"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formations Section -->
+  <section class="formations-section" id="formations">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <span class="section-tag">Nos Programmes</span>
+        <h2 class="section-title">Découvrez nos filières de formation</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          Des cursus adaptés, de niveau DTS à la Licence, conçus pour faire de vous un professionnel recherché.
+        </p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="tab-container scroll-reveal">
+        <button class="tab-btn active" data-tab="informatique"><i class="fa-solid fa-laptop"></i> Informatique</button>
+        <button class="tab-btn" data-tab="gestion"><i class="fa-solid fa-chart-line"></i> Gestion</button>
+        <button class="tab-btn" data-tab="administration"><i class="fa-solid fa-folder-open"></i> Administration</button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="tab-content-wrapper scroll-reveal">
+        
+        <!-- INFORMATIQUE TAB -->
+        <div class="tab-content active" id="tab-informatique">
+          <div class="programs-grid">
+            <div class="program-card">
+              <div class="program-badge">Technologie</div>
+              <div class="program-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <h4 class="program-title">Maintenance informatique</h4>
+              <p class="program-text">Maîtrisez le diagnostic, le dépannage matériel et logiciel, et l'optimisation des architectures d'ordinateurs.</p>
+              <ul class="program-details">
+                <li><i class="fa-solid fa-check text-green"></i> Diagnostic de pannes</li>
+                <li><i class="fa-solid fa-check text-green"></i> Support technique</li>
+                <li><i class="fa-solid fa-check text-green"></i> Gestion de parc</li>
+              </ul>
+              <button class="btn btn-card open-admission-modal">Postuler</button>
+            </div>
+            
+            <div class="program-card">
+              <div class="program-badge">Technologie</div>
+              <div class="program-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <h4 class="program-title">Réseaux & Télécoms</h4>
+              <p class="program-text">Apprenez à concevoir, déployer, sécuriser et administrer les infrastructures réseaux d'entreprise.</p>
+              <ul class="program-details">
+                <li><i class="fa-solid fa-check text-green"></i> Routage & Commutation</li>
+                <li><i class="fa-solid fa-check text-green"></i> Administration Systèmes</li>
+                <li><i class="fa-solid fa-check text-green"></i> Cloud & Virtualisation</li>
+              </ul>
+              <button class="btn btn-card open-admission-modal">Postuler</button>
+            </div>
+
+            <div class="program-card">
+              <div class="program-badge">Technologie</div>
+              <div class="program-icon"><i class="fa-solid fa-code"></i></div>
+              <h4 class="program-title">Développement Web & Mobile</h4>
+              <p class="program-text">Devenez développeur Full-Stack capable de créer des applications web modernes, dynamiques et évolutives.</p>
+              <ul class="program-details">
+                <li><i class="fa-solid fa-check text-green"></i> HTML, CSS, JS, React</li>
+                <li><i class="fa-solid fa-check text-green"></i> Backend & APIs (Node, PHP)</li>
+                <li><i class="fa-solid fa-check text-green"></i> Bases de données</li>
+              </ul>
+              <button class="btn btn-card open-admission-modal">Postuler</button>
+            </div>
+
+            <div class="program-card">
+              <div class="program-badge">Technologie</div>
+              <div class="program-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <h4 class="program-title">Cybersécurité</h4>
+              <p class="program-text">Formez-vous à la protection des données et à la sécurisation des systèmes face aux cybermenaces modernes.</p>
+              <ul class="program-details">
+                <li><i class="fa-solid fa-check text-green"></i> Audit de sécurité</li>
+                <li><i class="fa-solid fa-check text-green"></i> Cryptographie</li>
+                <li><i class="fa-solid fa-check text-green"></i> Gestion des incidents</li>
+              </ul>
+              <button class="btn btn-card open-admission-modal">Postuler</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- GESTION TAB -->
+        <div class="tab-content" id="tab-gestion">
+          <div class="programs-grid">
+            <div class="program-card">
+              <div class="program-badge">Business</div>
+              <div class="program-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <h4 class="program-title">Gestion d'entreprise</h4>
+              <p class="program-text">Développez des compétences polyvalentes pour diriger des équipes, piloter des projets et optimiser l'organisation.</p>
+              <ul class="program-details">
+                <li><i class="fa-solid fa-check text-green"></i> Stratégie managériale</li>
+                <li><i class="fa-solid fa-check text-green"></i> Entreprenariat</li>
+                <li><i class="fa-solid fa-check text-green"></i> Gestion de projet</li>
+              </ul>
+              <button class="btn btn-card open-admission-modal">Postuler</button>
+            </div>
+
+            <div class="program-card">
+              <div class="program-badge">Business</div>
+              <div class="program-icon"><i class="fa-solid fa-calculator"></i></div>
+              <h4 class="program-title">Comptabilité</h4>
+              <p class="program-text">Maîtrisez les normes comptables, la gestion fiscale et la préparation des états financiers de l'entreprise.</p>
+              <ul class="program-details">
+                <li><i class="fa-solid fa-check text-green"></i> Saisie & Bilan comptable</li>
+                <li><i class="fa-solid fa-check text-green"></i> Comptabilité analytique</li>
+                <li><i class="fa-solid fa-check text-green"></i> Fiscalité sénégalaise</li>
+              </ul>
+              <button class="btn btn-card open-admission-modal">Postuler</button>
+            </div>
+
+            <div class="program-card">
+              <div class="program-badge">Business</div>
+              <div class="program-icon"><i class="fa-solid fa-coins"></i></div>
+              <h4 class="program-title">Finance d'entreprise</h4>
+              <p class="program-text">Apprenez à analyser la santé financière d'une organisation, à structurer des investissements et gérer la trésorerie.</p>
+              <ul class="program-details">
+                <li><i class="fa-solid fa-check text-green"></i> Analyse financière</li>
+                <li><i class="fa-solid fa-check text-green"></i> Gestion de trésorerie</li>
+                <li><i class="fa-solid fa-check text-green"></i> Choix d'investissement</li>
+              </ul>
+              <button class="btn btn-card open-admission-modal">Postuler</button>
+            </div>
+
+            <div class="program-card">
+              <div class="program-badge">Business</div>
+              <div class="program-icon"><i class="fa-solid fa-bullhorn"></i></div>
+              <h4 class="program-title">Marketing & Vente</h4>
+              <p class="program-text">Maîtrisez les techniques de vente, l'analyse comportementale de marché et les leviers du marketing digital.</p>
+              <ul class="program-details">
+                <li><i class="fa-solid fa-check text-green"></i> Stratégie marketing</li>
+                <li><i class="fa-solid fa-check text-green"></i> Marketing Digital</li>
+                <li><i class="fa-solid fa-check text-green"></i> Techniques de négociation</li>
+              </ul>
+              <button class="btn btn-card open-admission-modal">Postuler</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADMINISTRATION TAB -->
+        <div class="tab-content" id="tab-administration">
+          <div class="programs-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 900px; margin: 0 auto;">
+            <div class="program-card">
+              <div class="program-badge">Administration</div>
+              <div class="program-icon"><i class="fa-solid fa-users"></i></div>
+              <h4 class="program-title">Gestion administrative</h4>
+              <p class="program-text">Devenez le pivot d'une organisation en gérant l'administration générale, les RH et la communication interne.</p>
+              <ul class="program-details">
+                <li><i class="fa-solid fa-check text-green"></i> Secrétariat de direction</li>
+                <li><i class="fa-solid fa-check text-green"></i> Gestion du personnel</li>
+                <li><i class="fa-solid fa-check text-green"></i> Rédaction administrative</li>
+              </ul>
+              <button class="btn btn-card open-admission-modal">Postuler</button>
+            </div>
+
+            <div class="program-card">
+              <div class="program-badge">Administration</div>
+              <div class="program-icon"><i class="fa-solid fa-landmark"></i></div>
+              <h4 class="program-title">Banque & Finance</h4>
+              <p class="program-text">Spécialisez-vous dans les opérations bancaires, la gestion de portefeuille et le conseil financier client.</p>
+              <ul class="program-details">
+                <li><i class="fa-solid fa-check text-green"></i> Opérations de guichet</li>
+                <li><i class="fa-solid fa-check text-green"></i> Analyse des crédits</li>
+                <li><i class="fa-solid fa-check text-green"></i> Épargne & Produits bancaires</li>
+              </ul>
+              <button class="btn btn-card open-admission-modal">Postuler</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Parcours Étudiant (Timeline) Section -->
+  <section class="timeline-section" id="parcours">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <span class="section-tag">Votre Cursus</span>
+        <h2 class="section-title">Le Parcours Étudiant à l'ISSIG</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          De votre premier jour d'inscription à votre insertion réussie en entreprise, nous construisons votre avenir étape par étape.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Step 1 -->
+        <div class="timeline-item scroll-reveal">
+          <div class="timeline-dot">1</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">1. Inscription & Orientation</h3>
+            <p class="timeline-text">
+              Dépôt de votre dossier de candidature en ligne ou sur place. Vous bénéficiez d'un entretien d'orientation individuel pour valider votre choix de filière en fonction de vos aspirations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-item scroll-reveal">
+          <div class="timeline-dot">2</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">2. Formation & Apprentissage</h3>
+            <p class="timeline-text">
+              Immersion dans des cours dispensés par des professionnels, enrichis par des séances de travaux pratiques intensifs et des projets collaboratifs concrets.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-item scroll-reveal">
+          <div class="timeline-dot">3</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">3. Stage Professionnel</h3>
+            <p class="timeline-text">
+              Mise en application des connaissances en entreprise lors d'un stage obligatoire de 2 à 3 mois, encadré conjointement par un maître de stage et un tuteur de l'ISSIG.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-item scroll-reveal">
+          <div class="timeline-dot">4</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">4. Obtention du Diplôme</h3>
+            <p class="timeline-text">
+              Soutenance du rapport de stage et examens finaux menant à l'obtention de votre diplôme d'État reconnu, couronnée par notre cérémonie officielle de remise des diplômes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-item scroll-reveal">
+          <div class="timeline-dot">5</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">5. Insertion Professionnelle</h3>
+            <p class="timeline-text">
+              Grâce au réseau d'anciens (alumni) et à nos entreprises partenaires, vous êtes mis en relation avec des opportunités d'emploi directes pour démarrer votre carrière.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admission Section -->
+  <section class="admission-section" id="admission">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <span class="section-tag text-white">Rejoindre l'ISSIG</span>
+        <h2 class="section-title text-white">Processus d'Admission</h2>
+        <div class="section-line bg-gold"></div>
+        <p class="section-subtitle text-white-opacity">
+          Toutes les informations nécessaires pour préparer votre candidature et rejoindre notre prochaine promotion.
+        </p>
+      </div>
+
+      <div class="admission-grid">
+        <!-- Left: Conditions & Tuition -->
+        <div class="admission-col scroll-reveal">
+          <div class="admission-card">
+            <h3 class="admission-card-title"><i class="fa-solid fa-list-check text-green"></i> Conditions d'accès</h3>
+            <ul class="admission-list">
+              <li><strong>Première Année (DTS / Licence 1) :</strong> Être titulaire du Baccalauréat (toutes séries admissibles selon la filière demandée) ou d'un diplôme équivalent.</li>
+              <li><strong>Admission Parallèle (Licence 3) :</strong> Être titulaire d'un diplôme de niveau Bac+2 (BTS, DTS, DUT) dans une filière correspondante.</li>
+              <li><strong>Admission sur dossier :</strong> Sélection rigoureuse après examen du dossier scolaire et entretien de motivation devant le comité pédagogique.</li>
+            </ul>
+          </div>
+
+          <div class="admission-card">
+            <h3 class="admission-card-title"><i class="fa-solid fa-wallet text-green"></i> Scolarité & Financement</h3>
+            <p class="admission-text">
+              L'ISSIG s'engage à proposer des frais de scolarité compétitifs et adaptés afin de rendre l'excellence académique accessible à tous.
+            </p>
+            <ul class="admission-list">
+              <li>Facilités de paiement échelonnées sur l'année.</li>
+              <li>Bourses d'excellence octroyées aux meilleurs dossiers.</li>
+              <li>Tarifs préférentiels pour les inscriptions anticipées.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Required Docs & Calendar -->
+        <div class="admission-col scroll-reveal" style="animation-delay: 0.15s;">
+          <div class="admission-card">
+            <h3 class="admission-card-title"><i class="fa-solid fa-folder-open text-green"></i> Documents Requis</h3>
+            <ul class="admission-list">
+              <li><i class="fa-regular fa-square-check text-green"></i> Une demande d'admission adressée au Directeur</li>
+              <li><i class="fa-regular fa-square-check text-green"></i> Une copie légalisée du diplôme du Baccalauréat (ou attestation)</li>
+              <li><i class="fa-regular fa-square-check text-green"></i> Les bulletins de notes des classes de Seconde, Première et Terminale</li>
+              <li><i class="fa-regular fa-square-check text-green"></i> Un extrait de naissance de moins de 3 mois</li>
+              <li><i class="fa-regular fa-square-check text-green"></i> Deux photos d'identité récentes</li>
+              <li><i class="fa-regular fa-square-check text-green"></i> Une copie de la carte nationale d'identité (ou passeport)</li>
+            </ul>
+          </div>
+
+          <div class="admission-card">
+            <h3 class="admission-card-title"><i class="fa-solid fa-calendar-days text-green"></i> Calendrier d'Inscription</h3>
+            <ul class="admission-timeline">
+              <li>
+                <span class="timeline-date">Début Juin</span>
+                <span class="timeline-event">Ouverture des inscriptions & dépôts de dossiers</span>
+              </li>
+              <li>
+                <span class="timeline-date">Mi-Septembre</span>
+                <span class="timeline-event">Date limite de dépôt pour la première session</span>
+              </li>
+              <li>
+                <span class="timeline-date">Début Octobre</span>
+                <span class="timeline-event">Rentrée académique solennelle</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="admission-footer scroll-reveal">
+        <button class="btn btn-primary btn-large open-admission-modal"><i class="fa-solid fa-paper-plane"></i> Déposer sa candidature en ligne</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section (Blog) -->
+  <section class="blog-section" id="actualites">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <span class="section-tag">Actualités</span>
+        <h2 class="section-title">Événements & Vie Académique</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">
+          Suivez les actualités de l'ISSIG, les événements académiques et les nouveautés de l'institut.
+        </p>
+      </div>
+
+      <div class="blog-grid">
+        <!-- Post 1 -->
+        <article class="blog-card scroll-reveal">
+          <div class="blog-image-wrapper">
+            <span class="blog-category-badge">Admission</span>
+            <div class="blog-placeholder-img" style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);">
+              <i class="fa-solid fa-user-plus"></i>
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> 05 Juin 2026</span>
+              <span><i class="fa-regular fa-user"></i> Direction</span>
+            </div>
+            <h3 class="blog-title"><a href="#admission">Ouverture des inscriptions pour l'année 2026-2027</a></h3>
+            <p class="blog-excerpt">
+              Les dossiers d'inscription sont désormais acceptés en ligne et au niveau de l'administration pour toutes nos filières en informatique et gestion.
+            </p>
+            <a href="#admission" class="blog-more-link">Lire la suite <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-card scroll-reveal" style="animation-delay: 0.1s;">
+          <div class="blog-image-wrapper">
+            <span class="blog-category-badge">Programmes</span>
+            <div class="blog-placeholder-img" style="background: linear-gradient(135deg, #16A34A 0%, #15803D 100%);">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> 20 Mai 2026</span>
+              <span><i class="fa-regular fa-user"></i> Pédagogie</span>
+            </div>
+            <h3 class="blog-title"><a href="#formations">Nouveaux programmes en Intelligence Artificielle</a></h3>
+            <p class="blog-excerpt">
+              L'ISSIG enrichit son offre de formation dans le domaine informatique avec de nouveaux modules spécialisés en IA et Science des Données applicables dès la rentrée.
+            </p>
+            <a href="#formations" class="blog-more-link">Lire la suite <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-card scroll-reveal" style="animation-delay: 0.2s;">
+          <div class="blog-image-wrapper">
+            <span class="blog-category-badge">Événements</span>
+            <div class="blog-placeholder-img" style="background: linear-gradient(135deg, #D4AF37 0%, #B49026 100%);">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span><i class="fa-regular fa-calendar"></i> 05 Mai 2026</span>
+              <span><i class="fa-regular fa-user"></i> Cérémonie</span>
+            </div>
+            <h3 class="blog-title"><a href="#">Remise des diplômes de la promotion sortante</a></h3>
+            <p class="blog-excerpt">
+              Félicitations à nos talentueux diplômés qui ont brillamment soutenu leurs travaux de fin de cycle devant des jurys d'exception composés d'universitaires et d'entrepreneurs.
+            </p>
+            <a href="#" class="blog-more-link">Lire la suite <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <!-- Col 1: About -->
+        <div class="footer-col scroll-reveal">
+          <div class="footer-logo-wrapper">
+            <!-- Simplified Logo for footer -->
+            <h3 class="footer-title text-white">ISSIG THIÈS</h3>
+          </div>
+          <p class="footer-about">
+            Institut Supérieur de référence à Thiès formant les cadres et professionnels dans les domaines porteurs de l'informatique, de la gestion et de la finance.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="footer-col scroll-reveal" style="animation-delay: 0.1s;">
+          <h4 class="footer-col-title">Liens rapides</h4>
+          <ul class="footer-links">
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Accueil</a></li>
+            <li><a href="#formations"><i class="fa-solid fa-chevron-right"></i> Nos Formations</a></li>
+            <li><a href="#admission"><i class="fa-solid fa-chevron-right"></i> Conditions d'Admission</a></li>
+            <li><a href="#parcours"><i class="fa-solid fa-chevron-right"></i> Parcours étudiant</a></li>
+            <li><a href="#actualites"><i class="fa-solid fa-chevron-right"></i> Actualités</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div class="footer-col scroll-reveal" style="animation-delay: 0.2s;">
+          <h4 class="footer-col-title">Coordonnées</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-text">
+                <span>Téléphone</span>
+                <strong><a href="tel:339506266">33 950 62 66</a></strong>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-text">
+                <span>Adresse email</span>
+                <strong><a href="mailto:issigthies@gmail.com">issigthies@gmail.com</a></strong>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-text">
+                <span>Adresse physique</span>
+                <strong>Thiès, Sénégal</strong>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col scroll-reveal" style="animation-delay: 0.3s;">
+          <h4 class="footer-col-title">Newsletter</h4>
+          <p class="footer-about" style="margin-bottom: 1rem;">Abonnez-vous pour recevoir les dernières nouvelles et annonces de rentrée.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Votre adresse email" aria-label="Adresse email pour la newsletter" required>
+            <button type="submit" aria-label="S'abonner"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div class="newsletter-msg" id="newsletter-msg"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Maps Simulation / Iframe -->
+    <div class="footer-map-container container scroll-reveal">
+      <h4 class="footer-col-title" style="margin-top: 2rem; margin-bottom: 1rem;">Nous trouver à Thiès</h4>
+      <div class="map-wrapper">
+        <!-- Elegant dark theme styled OpenStreetMap or Google Map embed -->
+        <!-- Center coordinates for Thiès, Sénégal -->
+        <iframe 
+          title="Google Map ISSIG Thiès"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15426.685984635848!2d-16.93883395!3d14.8146666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1bf4df5bbaea1%3A0x633390cbf5c026cb!2sThi%C3%A8s!5e0!3m2!1sfr!2ssn!4v1680000000000!5m2!1sfr!2ssn" 
+          width="100%" 
+          height="300" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; 2026 ISSIG Thiès. Tous droits réservés.</p>
+        <p>Conçu pour l'excellence académique</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Admission & Candidacy Modal -->
+  <div class="modal-overlay" id="admission-modal">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Fermer le formulaire">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3 class="modal-title">Candidature en Ligne</h3>
+        <p class="modal-subtitle">Déposez votre dossier de candidature en quelques clics</p>
+      </div>
+      
+      <form class="modal-form" id="candidacy-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cand-lastname">Nom <span class="required">*</span></label>
+            <input type="text" id="cand-lastname" name="lastname" required placeholder="Ex: Diop">
+          </div>
+          <div class="form-group">
+            <label for="cand-firstname">Prénom <span class="required">*</span></label>
+            <input type="text" id="cand-firstname" name="firstname" required placeholder="Ex: Moussa">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cand-email">Adresse Email <span class="required">*</span></label>
+            <input type="email" id="cand-email" name="email" required placeholder="Ex: moussa.diop@email.com">
+          </div>
+          <div class="form-group">
+            <label for="cand-phone">Numéro de Téléphone <span class="required">*</span></label>
+            <input type="tel" id="cand-phone" name="phone" required placeholder="Ex: 77 123 45 67">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cand-level">Niveau d'études actuel <span class="required">*</span></label>
+            <select id="cand-level" name="level" required>
+              <option value="" disabled selected>Choisir votre niveau...</option>
+              <option value="terminale">Classe de Terminale</option>
+              <option value="bac">Titulaire du Baccalauréat</option>
+              <option value="bac_plus_1">Bac +1</option>
+              <option value="bac_plus_2">Bac +2 (BTS, DUT...)</option>
+              <option value="licence">Titulaire de la Licence</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cand-program">Filière d'intérêt souhaitée <span class="required">*</span></label>
+            <select id="cand-program" name="program" required>
+              <option value="" disabled selected>Sélectionner une filière...</option>
+              <optgroup label="Informatique">
+                <option value="maintenance">Maintenance informatique</option>
+                <option value="reseaux">Réseaux & Télécoms</option>
+                <option value="developpement">Développement Web & Mobile</option>
+                <option value="cyber">Cybersécurité</option>
+              </optgroup>
+              <optgroup label="Gestion">
+                <option value="gestion_ent">Gestion d'entreprise</option>
+                <option value="compta">Comptabilité</option>
+                <option value="finance">Finance d'entreprise</option>
+                <option value="marketing">Marketing & Vente</option>
+              </optgroup>
+              <optgroup label="Administration & Finance">
+                <option value="gestion_admin">Gestion administrative</option>
+                <option value="banque_finance">Banque & Finance</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cand-message">Pourquoi souhaitez-vous rejoindre l'ISSIG ? (Lettre de motivation facultative)</label>
+          <textarea id="cand-message" name="message" rows="4" placeholder="Présentez brièvement vos motivations..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-large btn-block" id="candidacy-submit">
+          <span class="btn-text">Soumettre ma candidature</span>
+          <span class="btn-spinner hidden"><i class="fa-solid fa-circle-notch fa-spin"></i> Traitement...</span>
+        </button>
+      </form>
+      
+      <!-- Success message panel -->
+      <div class="modal-success hidden" id="candidacy-success">
+        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h4 class="success-title">Candidature Soumise avec Succès !</h4>
+        <p class="success-text">
+          Merci, <strong id="success-user-name">Moussa</strong> ! Votre demande de candidature a été enregistrée. Un conseiller pédagogique de l'ISSIG prendra contact avec vous par e-mail ou téléphone sous 48 heures ouvrées pour valider les prochaines étapes.
+        </p>
+        <button class="btn btn-outline" id="success-close">Fermer la fenêtre</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
