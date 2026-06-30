@@ -182,7 +182,7 @@
             </span>
 
             <h2>
-                Former aujourd'hui lestalents<br>
+                Former aujourd'hui les talents<br>
                 du numérique de demain.
             </h2>
 
@@ -586,7 +586,7 @@
           <div class="timeline-content">
             <h3 class="timeline-title">3. Stage Professionnel</h3>
             <p class="timeline-text">
-              Mise en application des connaissances en entreprise lors d'un stage obligatoire de 2 à 3 mois, encadré conjointement par un maître de stage et un tuteur de l'ISSIG.
+              Mise en application des connaissances en entreprise lors d'un stage de 2 à 3 mois, encadré conjointement par un maître de stage et un tuteur de l'ISSIG.
             </p>
           </div>
         </div>
@@ -885,7 +885,11 @@
         <p class="modal-subtitle">Déposez votre dossier de candidature en quelques clics</p>
       </div>
       
-      <form class="modal-form" id="candidacy-form">
+      <form
+    class="modal-form"
+    id="candidacy-form"
+    action="https://formspree.io/f/mgojllzp"
+    method="POST">
         <div class="form-row">
           <div class="form-group">
             <label for="cand-lastname">Nom <span class="required">*</span></label>
@@ -949,6 +953,8 @@
           <textarea id="cand-message" name="message" rows="4" placeholder="Présentez brièvement vos motivations..."></textarea>
         </div>
 
+        <input type="hidden" name="_subject" value="Nouvelle candidature ISSIG">
+        <input type="hidden" name="_captcha" value="false">
         <button type="submit" class="btn btn-primary btn-large btn-block" id="candidacy-submit">
           <span class="btn-text">Soumettre ma candidature</span>
           <span class="btn-spinner hidden"><i class="fa-solid fa-circle-notch fa-spin"></i> Traitement...</span>

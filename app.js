@@ -227,27 +227,66 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Handle Candidacy Form Submission
-  candidacyForm.addEventListener('submit', (e) => {
+  // ==========================================================================
+// HANDLE CANDIDACY FORM SUBMISSION (FORMSPREE)
+// ==========================================================================
+
+candidacyForm.addEventListener('submit', async (e) => {
+
     e.preventDefault();
 
     const firstNameVal = document.getElementById('cand-firstname').value.trim();
-    
-    // Show loading spinner
+
+    // Loading
     candidacySubmitBtn.disabled = true;
     candidacySubmitBtn.querySelector('.btn-text').classList.add('hidden');
     candidacySubmitBtn.querySelector('.btn-spinner').classList.remove('hidden');
 
-    // Simulate Server Request API Call (1.5s delay)
-    setTimeout(() => {
-      // Set name in success screen
-      successUserName.textContent = firstNameVal;
+    try{
 
-      // Swap form and success screen
-      candidacyForm.classList.add('hidden');
-      candidacySuccess.classList.remove('hidden');
-    }, 1500);
-  });
+        const response = await fetch(candidacyForm.action,{
+
+            method:'POST',
+
+            body:new FormData(candidacyForm),
+
+            headers:{
+                'Accept':'application/json'
+            }
+
+        });
+
+        if(response.ok){
+
+            successUserName.textContent = firstNameVal;
+
+            candidacyForm.classList.add('hidden');
+
+            candidacySuccess.classList.remove('hidden');
+
+            candidacyForm.reset();
+
+        }else{
+
+            alert("Une erreur est survenue lors de l'envoi de votre candidature.");
+
+        }
+
+    }catch(error){
+
+        alert("Impossible de contacter le serveur. Vérifiez votre connexion Internet.");
+
+    }finally{
+
+        candidacySubmitBtn.disabled = false;
+
+        candidacySubmitBtn.querySelector('.btn-text').classList.remove('hidden');
+
+        candidacySubmitBtn.querySelector('.btn-spinner').classList.add('hidden');
+
+    }
+
+});
 
 
   // ==========================================================================
