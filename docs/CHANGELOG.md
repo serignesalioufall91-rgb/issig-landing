@@ -22,4 +22,31 @@
 - Fenêtre de confirmation après envoi.
 - Gestion du chargement pendant l'envoi.
 - Première version fonctionnelle du site.
-jjoefendslnà_ufkejdkajdfu"gkjkcvhdazddnkjrfkednjfdzldsizdndkcioejndzcjcfkc
+# CHANGELOG
+
+## [v1.0.0] - 2026-07-14
+
+### ✨ Ajouts
+- Création de la Landing Page ISSIG
+- Hero Section moderne
+- Section "À propos de l'ISSIG"
+- Section Formations
+- Timeline du parcours étudiant
+- Modal de candidature
+- Formulaire connecté à Formspree
+- Footer complet
+- Responsive mobile et tablette
+- Favicon
+- Animations de défilement
+
+### 🎨 Améliorations
+- Refonte complète de la section À propos
+- Amélioration du responsive
+- Optimisation du Hero
+- Organisation des assets
+- Correction des liens et images
+
+### 🔧 Technique
+- Initialisation Git
+- Dépôt GitHub
+- Release officielle v1.0.0
