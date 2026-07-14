@@ -422,7 +422,7 @@ ul {
   display: flex;
   align-items: center;
   padding: calc(var(--header-height) + 3rem) 0 5rem 0;
-  background-image: url('images/hero_campus_bg.png');
+ background-image: url('../images/hero_campus_bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1659,7 +1659,71 @@ ul {
   .modal-box {
     padding: 25px;
   }
+  /* ===========================
+   ABOUT SECTION RESPONSIVE
+=========================== */
+
+.about-container{
+    grid-template-columns:1fr;
+    gap:50px;
 }
+
+.about-image{
+    order:2;
+}
+
+.about-content{
+    order:1;
+    text-align:center;
+}
+
+.section-badge{
+    margin:0 auto 20px;
+}
+
+.about-content h2{
+    font-size:2.3rem;
+    line-height:1.25;
+    max-width:100%;
+    margin:0 auto 25px;
+}
+
+.about-description{
+    font-size:1rem;
+    max-width:100%;
+    margin:0 auto 35px;
+}
+
+.features-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.about-btn{
+    width:100%;
+}
+
+.about-card{
+    position:relative;
+    right:auto;
+    bottom:auto;
+    margin:-70px auto 0;
+    max-width:280px;
+}
+.about-content{
+    text-align:center;
+    align-items:center;
+}
+
+.about-description{
+    text-align:center;
+}
+  .about-content h2{
+    font-size: clamp(1.9rem, 6vw, 3.8rem);
+    line-height: 1.2;
+}
+}
+  
 
 /* Small smartphones */
 @media (max-width: 480px) {
@@ -1705,7 +1769,13 @@ ul {
     gap: 10px;
     text-align: center;
   }
+ 
+}.about-content h2{
+    font-size: clamp(1.9rem, 6vw, 3.8rem);
+    line-height: 1.2;
 }
+
+
 /* ===================================
    ABOUT SECTION
 =================================== */
