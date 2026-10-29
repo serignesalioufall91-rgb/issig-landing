@@ -67,31 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ==========================================================================
-  // FORMATIONS TAB SWITCHER
-  // ==========================================================================
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
-
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const targetTab = button.getAttribute('data-tab');
-
-      // Update active states on buttons
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      // Update active states on contents with smooth animation
-      tabContents.forEach(content => {
-        content.classList.remove('active');
-        if (content.id === `tab-${targetTab}`) {
-          content.classList.add('active');
-        }
-      });
-    });
-  });
-
-
-  // ==========================================================================
   // SCROLL REVEAL (Intersection Observer)
   // ==========================================================================
   const revealElements = document.querySelectorAll('.scroll-reveal');
@@ -176,117 +151,128 @@ document.addEventListener('DOMContentLoaded', () => {
   // ADMISSION MODAL (CANDIDACY FORM)
   // ==========================================================================
   const modal = document.getElementById('admission-modal');
-  const openModalBtns = document.querySelectorAll('.open-admission-modal');
-  const closeModalBtn = document.getElementById('modal-close');
-  const successCloseBtn = document.getElementById('success-close');
-  const candidacyForm = document.getElementById('candidacy-form');
-  const candidacySuccess = document.getElementById('candidacy-success');
-  const candidacySubmitBtn = document.getElementById('candidacy-submit');
-  const successUserName = document.getElementById('success-user-name');
 
-  const openModal = () => {
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Disable scroll under modal
-    
-    // Auto-select program tab if postuler button is clicked inside a training card
-    // We can extract interest area from cards if needed
-  };
+  // Le modal n'existe pas sur toutes les pages : on ne branche les écouteurs que s'il est présent.
+  if (modal) {
+    const openModalBtns = document.querySelectorAll('.open-admission-modal');
+    const closeModalBtn = document.getElementById('modal-close');
+    const successCloseBtn = document.getElementById('success-close');
+    const candidacyForm = document.getElementById('candidacy-form');
+    const candidacySuccess = document.getElementById('candidacy-success');
+    const candidacySubmitBtn = document.getElementById('candidacy-submit');
+    const successUserName = document.getElementById('success-user-name');
 
-  const closeModal = () => {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
+    const programSelect = document.getElementById('cand-program');
+
+    const openModal = (event) => {
+      // Si le bouton cliqué contient data-formation, on présélectionne cette formation
+      const selectedFormation = event.currentTarget.dataset.formation;
+
+      if (programSelect && selectedFormation) {
+        programSelect.value = selectedFormation;
+      }
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Disable scroll under modal
+    };
+
+    const closeModal = () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
     
-    // Reset form states after closing modal (with small delay for smooth transition)
-    setTimeout(() => {
-      candidacyForm.classList.remove('hidden');
-      candidacySuccess.classList.add('hidden');
-      candidacyForm.reset();
+      // Reset form states after closing modal (with small delay for smooth transition)
+      setTimeout(() => {
+        candidacyForm.classList.remove('hidden');
+        candidacySuccess.classList.add('hidden');
+        candidacyForm.reset();
       
-      // Reset submit button state
-      candidacySubmitBtn.disabled = false;
-      candidacySubmitBtn.querySelector('.btn-text').classList.remove('hidden');
-      candidacySubmitBtn.querySelector('.btn-spinner').classList.add('hidden');
-    }, 400);
-  };
-
-  openModalBtns.forEach(btn => btn.addEventListener('click', openModal));
-  closeModalBtn.addEventListener('click', closeModal);
-  successCloseBtn.addEventListener('click', closeModal);
-
-  // Close modal when clicking outside the modal box
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  // Handle ESC key to close modal
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      closeModal();
-    }
-  });
-
-  // ==========================================================================
-// HANDLE CANDIDACY FORM SUBMISSION (FORMSPREE)
-// ==========================================================================
-
-candidacyForm.addEventListener('submit', async (e) => {
-
-    e.preventDefault();
-
-    const firstNameVal = document.getElementById('cand-firstname').value.trim();
-
-    // Loading
-    candidacySubmitBtn.disabled = true;
-    candidacySubmitBtn.querySelector('.btn-text').classList.add('hidden');
-    candidacySubmitBtn.querySelector('.btn-spinner').classList.remove('hidden');
-
-    try{
-
-        const response = await fetch(candidacyForm.action,{
-
-            method:'POST',
-
-            body:new FormData(candidacyForm),
-
-            headers:{
-                'Accept':'application/json'
-            }
-
-        });
-
-        if(response.ok){
-
-            successUserName.textContent = firstNameVal;
-
-            candidacyForm.classList.add('hidden');
-
-            candidacySuccess.classList.remove('hidden');
-
-            candidacyForm.reset();
-
-        }else{
-
-            alert("Une erreur est survenue lors de l'envoi de votre candidature.");
-
-        }
-
-    }catch(error){
-
-        alert("Impossible de contacter le serveur. Vérifiez votre connexion Internet.");
-
-    }finally{
-
+        // Reset submit button state
         candidacySubmitBtn.disabled = false;
-
         candidacySubmitBtn.querySelector('.btn-text').classList.remove('hidden');
-
         candidacySubmitBtn.querySelector('.btn-spinner').classList.add('hidden');
+      }, 400);
+    };
 
-    }
+    openModalBtns.forEach(btn => btn.addEventListener('click', openModal));
+    closeModalBtn.addEventListener('click', closeModal);
+    successCloseBtn.addEventListener('click', closeModal);
 
-});
+    // Close modal when clicking outside the modal box
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Handle ESC key to close modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    // ==========================================================================
+  // HANDLE CANDIDACY FORM SUBMISSION (FORMSPREE)
+  // ==========================================================================
+
+  candidacyForm.addEventListener('submit', async (e) => {
+
+      e.preventDefault();
+
+      const firstNameVal = document.getElementById('cand-firstname').value.trim();
+
+      // Loading
+      candidacySubmitBtn.disabled = true;
+      candidacySubmitBtn.querySelector('.btn-text').classList.add('hidden');
+      candidacySubmitBtn.querySelector('.btn-spinner').classList.remove('hidden');
+
+      try{
+
+          const response = await fetch(candidacyForm.action,{
+
+              method:'POST',
+
+              body:new FormData(candidacyForm),
+
+              headers:{
+                  'Accept':'application/json'
+              }
+
+          });
+
+          if(response.ok){
+
+              successUserName.textContent = firstNameVal;
+
+              candidacyForm.classList.add('hidden');
+
+              candidacySuccess.classList.remove('hidden');
+
+              candidacyForm.reset();
+
+          }else{
+
+              alert("Une erreur est survenue lors de l'envoi de votre candidature.");
+
+          }
+
+      }catch(error){
+
+          alert("Impossible de contacter le serveur. Vérifiez votre connexion Internet.");
+
+      }finally{
+
+          candidacySubmitBtn.disabled = false;
+
+          candidacySubmitBtn.querySelector('.btn-text').classList.remove('hidden');
+
+          candidacySubmitBtn.querySelector('.btn-spinner').classList.add('hidden');
+
+      }
+
+  });
+
+  } // fin if (modal)
 
 
   // ==========================================================================
@@ -323,4 +309,33 @@ candidacyForm.addEventListener('submit', async (e) => {
       }, 1200);
     });
   }
-});
+
+  
+  // ==========================================================================
+  // NAVIGATION ENTRE LES CATÉGORIES DE FORMATION
+  // ==========================================================================
+  const formationTabs = document.querySelectorAll('.formation-tab');
+
+  formationTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const selectedCategory = tab.dataset.category;
+
+      formationTabs.forEach((item) => {
+        const isSelected = item === tab;
+
+        item.classList.toggle('active', isSelected);
+        item.setAttribute('aria-selected', String(isSelected));
+        item.tabIndex = isSelected ? 0 : -1;
+      });
+
+      document.querySelectorAll('.formation-category').forEach((panel) => {
+        const isSelected = panel.id === `${selectedCategory}-panel`;
+
+        panel.hidden = !isSelected;
+        panel.classList.toggle('active', isSelected);
+      });
+    });
+  });
+
+    });
+
